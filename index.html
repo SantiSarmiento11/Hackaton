@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeGuardian - Monitoreo de Seguridad Vial</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Grid overlay pattern -->
+    <div class="grid-overlay"></div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="app-container">
+        
+        <!-- ================= VISTA DE REGISTRO ================= -->
+        <section id="view-register" class="view-section active">
+            <div class="register-card-wrapper">
+                <div class="brand-header">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-shield-halved glow-icon"></i>
+                    </div>
+                    <h1>Safe<span>Guardian</span></h1>
+                    <p class="tagline">Dispositivo Autónomo de Monitoreo y Prevención de Accidentes</p>
+                </div>
+                
+                <div class="glass-card register-card">
+                    <div class="card-header">
+                        <h2>Registro de Unidad Vial</h2>
+                        <p>Ingrese los datos del conductor y el vehículo para vincular el dispositivo de monitoreo al sistema central en el Área Metropolitana de Bucaramanga.</p>
+                    </div>
+                    
+                    <form id="register-form" autocomplete="off">
+                        <!-- Conductor -->
+                        <div class="form-section-title"><i class="fa-solid fa-user-tie"></i> Información del Conductor</div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="driver-name">Nombre Completo</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-user input-icon"></i>
+                                    <input type="text" id="driver-name" placeholder="Nombre completo" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="driver-id">Documento (Cédula)</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-id-card input-icon"></i>
+                                    <input type="text" id="driver-id" placeholder="Cédula de ciudadanía" required pattern="[0-9]{7,10}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="driver-company">Empresa de Transportes / Operador</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-building input-icon"></i>
+                                    <input type="text" id="driver-company" placeholder="Empresa o Cootransgiron / Particular" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vehículo -->
+                        <div class="form-section-title"><i class="fa-solid fa-truck-moving"></i> Datos del Vehículo</div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="vehicle-type">Tipo de Vehículo</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-car-side input-icon"></i>
+                                    <select id="vehicle-type" required>
+                                        <option value="" disabled selected>Seleccione el vehículo</option>
+                                        <option value="Tractomula">Tractomula (Tractor-remolque)</option>
+                                        <option value="Camión Rígido">Camión Rígido (Carga pesada)</option>
+                                        <option value="Turbina / Camión Medio">Turbina / Camión Mediano</option>
+                                        <option value="Van de Reparto">Van de Reparto</option>
+                                        <option value="Automóvil Particular">Automóvil Particular</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="vehicle-plate">Placa</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-window-maximize input-icon"></i>
+                                    <input type="text" id="vehicle-plate" placeholder="Ej. XLM-123" required pattern="[A-Z]{3}-[0-9]{3}" title="El formato debe ser ABC-123">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ruta -->
+                        <div class="form-section-title"><i class="fa-solid fa-route"></i> Trayecto Autorizado</div>
+                        <div class="form-group">
+                            <label for="route-select">Vía Asignada de Monitoreo</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-map-location-dot input-icon"></i>
+                                <select id="route-select" required>
+                                    <option value="" disabled selected>Seleccione la vía</option>
+                                    <option value="Vía Piedecuesta - Bucaramanga">Vía Piedecuesta - Bucaramanga (Densidad de carga)</option>
+                                    <option value="Anillo Vial (Girón - Floridablanca)">Anillo Vial (Zona Industrial)</option>
+                                    <option value="Autopista Floridablanca - Bucaramanga">Autopista Floridablanca (Troncal Metropolitana)</option>
+                                    <option value="Vía Palenque - Café Madrid">Vía Palenque - Café Madrid (Conector Norte)</option>
+                                    <option value="Vía Bucaramanga - Pamplona (Morrorrico)">Vía Bucaramanga - Pamplona (Zona de Montaña)</option>
+                                    <option value="Cabecera del Llano (Urbano)">Cabecera del Llano (Zona Urbana Bucaramanga)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit glow-button">
+                            <span>Vincular y Conectar Dispositivo</span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VISTA DE DASHBOARD ================= -->
+        <section id="view-dashboard" class="view-section">
+            
+            <!-- Navbar del Dashboard -->
+            <header class="dashboard-header glass-card">
+                <div class="logo">
+                    <i class="fa-solid fa-shield-halved text-cyan"></i>
+                    <h2>Safe<span>Guardian</span></h2>
+                </div>
+                <div class="header-status">
+                    <span class="status-indicator online pulsing"></span>
+                    <span class="status-text">SISTEMA ACTIVO</span>
+                    <span class="divider">|</span>
+                    <span class="ai-status">YOLO v8 & Voxel51 Engine: <span class="text-green">ONLINE</span></span>
+                </div>
+                <div class="user-profile">
+                    <span id="active-user-name">Conductor</span>
+                    <button id="btn-logout" class="btn-icon-only" title="Desconectar"><i class="fa-solid fa-power-off"></i></button>
+                </div>
+            </header>
+
+            <!-- Contenido Principal Grid -->
+            <div class="dashboard-grid">
+                
+                <!-- COLUMNA IZQUIERDA: Info del Conductor, Vehículo y Registro de Alertas -->
+                <div class="dashboard-col left-panel">
+                    
+                    <!-- Tarjeta Conductor/Vehículo -->
+                    <div class="glass-card panel-card driver-card">
+                        <h3><i class="fa-solid fa-id-card-clip text-cyan"></i> Terminal de Monitoreo</h3>
+                        <div class="driver-details">
+                            <div class="detail-row">
+                                <span class="label">Operador:</span>
+                                <span class="val" id="card-driver-name">Cargando...</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Identificación:</span>
+                                <span class="val" id="card-driver-id">--</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Empresa:</span>
+                                <span class="val" id="card-driver-company">Cargando...</span>
+                            </div>
+                            <div class="detail-divider"></div>
+                            <div class="detail-row">
+                                <span class="label">Vehículo:</span>
+                                <span class="val" id="card-vehicle-type">Cargando...</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Placa:</span>
+                                <span class="val badge-plate" id="card-vehicle-plate">--</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Vía de Tránsito:</span>
+                                <span class="val text-orange" id="card-route-name">Cargando...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Telemetría GPS Real -->
+                    <div class="glass-card panel-card telemetry-card">
+                        <h3><i class="fa-solid fa-location-crosshairs text-cyan"></i> Telemetría Georreferenciada</h3>
+                        <div class="telemetry-grid">
+                            <div class="tele-item">
+                                <span class="label">Latitud</span>
+                                <span class="value" id="tele-lat">7.11930</span>
+                            </div>
+                            <div class="tele-item">
+                                <span class="label">Longitud</span>
+                                <span class="value" id="tele-lng">-73.12240</span>
+                            </div>
+                            <div class="tele-item">
+                                <span class="label">Velocidad</span>
+                                <span class="value" id="tele-speed">0 km/h</span>
+                            </div>
+                            <div class="tele-item">
+                                <span class="label">Estado de Vía</span>
+                                <span class="value text-green" id="tele-risk">NORMAL</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Bucaramanga Visual Tracker -->
+                        <div class="radar-box">
+                            <div class="radar-sweep"></div>
+                            <div class="radar-blip p1"></div>
+                            <div class="radar-blip p2"></div>
+                            <div class="radar-blip center-blip"></div>
+                            <div class="radar-labels">
+                                <span>Cabecera</span>
+                                <span>Girón</span>
+                                <span>Floridablanca</span>
+                                <span>Piedecuesta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bitácora de Alertas Recientes -->
+                    <div class="glass-card panel-card alert-log-card">
+                        <h3><i class="fa-solid fa-list-check text-cyan"></i> Historial de Detección</h3>
+                        <div class="alert-log-container" id="alert-logs-list">
+                            <div class="empty-log-msg">No se han registrado incidencias en la ruta actual. Dispositivo vigilando...</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA CENTRAL: Monitor de Video y Controles de Análisis -->
+                <div class="dashboard-col center-panel">
+                    
+                    <!-- Monitor de Video/Imagen -->
+                    <div class="glass-card panel-card monitor-card">
+                        <div class="monitor-header">
+                            <div class="monitor-title">
+                                <span class="live-tag">LIVE FEED</span>
+                                <span class="monitor-source-text" id="monitor-source">Dispositivo Inactivo</span>
+                            </div>
+                            <div class="monitor-indicators">
+                                <span id="indicator-yolo" class="badge">YOLO v8: STANDBY</span>
+                                <span id="indicator-voxel" class="badge">VOXEL 51: STANDBY</span>
+                            </div>
+                        </div>
+
+                        <!-- Visor de Medios -->
+                        <div class="media-viewport" id="media-viewport">
+                            
+                            <!-- 1. Video Webcam real -->
+                            <video id="webcam-feed" autoplay playsinline></video>
+                            
+                            <!-- 2. Imagen estática subida -->
+                            <img id="image-preview" src="" alt="Detección de Imagen">
+                            
+                            <!-- 3. Canvas overlay para las cajas YOLO y metadatos de Voxel 51 -->
+                            <canvas id="canvas-overlay"></canvas>
+
+                            <!-- Pantalla de Carga/Procesamiento intermedio -->
+                            <div class="processing-overlay" id="processing-loader">
+                                <div class="spinner"></div>
+                                <span class="proc-step" id="proc-step-yolo">YOLO v8: Procesando imagen...</span>
+                                <span class="proc-step hide" id="proc-step-voxel">Voxel 51: Estructurando metadatos...</span>
+                                <span class="proc-step hide" id="proc-step-webhook">n8n: Transmitiendo telemetría...</span>
+                            </div>
+
+                            <!-- Placeholder Inicial -->
+                            <div class="viewport-placeholder" id="viewport-placeholder">
+                                <i class="fa-solid fa-video-slash"></i>
+                                <p>Dispositivo de Cámara Desconectado</p>
+                                <span>Conecte la cámara del vehículo para iniciar la transmisión en vivo o cargue un archivo fotográfico para iniciar el análisis inteligente de riesgos.</span>
+                            </div>
+
+                            <!-- Efecto de Escaneo Sci-Fi -->
+                            <div class="scanline-overlay"></div>
+                            
+                            <!-- Alerta en Pantalla Gigante (Parpadeo) -->
+                            <div class="screen-alert-overlay" id="screen-alert">
+                                <span class="alert-title">¡ALERTA DETECTADA!</span>
+                                <span class="alert-desc" id="screen-alert-desc">Infracción</span>
+                            </div>
+                        </div>
+
+                        <!-- Controles de la Fuente de Entrada -->
+                        <div class="media-controls">
+                            <div class="btn-group">
+                                <button id="btn-start-camera" class="btn btn-secondary glow-cyan">
+                                    <i class="fa-solid fa-camera"></i> Activar Cámara
+                                </button>
+                                <button id="btn-stop-camera" class="btn btn-danger hidden">
+                                    <i class="fa-solid fa-video-slash"></i> Desconectar Cámara
+                                </button>
+                                
+                                <button id="btn-trigger-upload" class="btn btn-secondary">
+                                    <i class="fa-solid fa-upload"></i> Cargar Imagen de Vía
+                                </button>
+                                <input type="file" id="file-upload" accept="image/*" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Selector de Escenarios de Diagnóstico -->
+                    <div class="glass-card panel-card scenarios-card">
+                        <h3><i class="fa-solid fa-road-barrier text-cyan"></i> Módulo de Diagnóstico y Análisis Vial</h3>
+                        <p class="section-desc">Seleccione uno de los perfiles de riesgo detectados en el área metropolitana de Bucaramanga para evaluar el comportamiento con YOLOv8 y Voxel 51, y enviar los datos al sistema de despacho.</p>
+                        
+                        <div class="scenarios-grid">
+                            
+                            <!-- Escenario 1: Fatiga -->
+                            <div class="scenario-card" data-scenario="drowsiness">
+                                <div class="scenario-badge bg-red">CRÍTICO</div>
+                                <div class="scenario-icon"><i class="fa-solid fa-eye-slash"></i></div>
+                                <h4>Fatiga Operador</h4>
+                                <p class="scenario-loc">Fallo Critico</p>
+                                <p class="scenario-desc">Detección de microsueño y falta de atención (>2.5s).</p>
+                            </div>
+
+                            <!-- Escenario 2: Hueco -->
+                            <div class="scenario-card" data-scenario="pothole">
+                                <div class="scenario-badge bg-orange">ADVERTENCIA</div>
+                                <div class="scenario-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                <h4>Daño en Calzada</h4>
+                                <p class="scenario-loc">Cra 27 con Calle 36</p>
+                                <p class="scenario-desc">Presencia de hueco profundo en pavimento húmedo.</p>
+                            </div>
+
+                            <!-- Escenario 3: Peatón -->
+                            <div class="scenario-card" data-scenario="pedestrian">
+                                <div class="scenario-badge bg-red">CRÍTICO</div>
+                                <div class="scenario-icon"><i class="fa-solid fa-person-walking-arrow-right"></i></div>
+                                <h4>Invasión Peatonal</h4>
+                                <p class="scenario-loc">Autopista Floridablanca</p>
+                                <p class="scenario-desc">Cruce indebido de transeúnte sobre carril de alta velocidad.</p>
+                            </div>
+
+                            <!-- Escenario 4: Neblina -->
+                            <div class="scenario-card" data-scenario="fog_speed">
+                                <div class="scenario-badge bg-red">CRÍTICO</div>
+                                <div class="scenario-icon"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+                                <h4>Condición Climática</h4>
+                                <p class="scenario-loc">Vía Morrorrico (Pamplona)</p>
+                                <p class="scenario-desc">Velocidad excesiva (85 km/h) bajo niebla densa de montaña.</p>
+                            </div>
+
+                            <!-- Escenario 5: Seguro -->
+                            <div class="scenario-card" data-scenario="normal">
+                                <div class="scenario-badge bg-green">OPERATIVO</div>
+                                <div class="scenario-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <h4>Ruta Despejada</h4>
+                                <p class="scenario-loc">Cabecera del Llano</p>
+                                <p class="scenario-desc">Monitoreo limpio: conductor enfocado, sin novedades.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA DERECHA: Integrador de Webhook n8n & Payload en Vivo -->
+                <div class="dashboard-col right-panel">
+                    
+                    <!-- Tarjeta del Webhook n8n -->
+                    <div class="glass-card panel-card webhook-card">
+                        <h3><i class="fa-brands fa-connectdevelop text-cyan"></i> Transmisión Webhook n8n</h3>
+                        
+                        <div class="webhook-endpoint-info">
+                            <label>Dirección del Endpoint (n8n):</label>
+                            <div class="webhook-input-group">
+                                <input type="text" id="webhook-url" value="https://carloslindarte.app.n8n.cloud/webhook-test/roadguardian-analyze" readonly>
+                                <button id="btn-copy-url" title="Copiar Dirección"><i class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Estado del Webhook -->
+                        <div class="webhook-status-display">
+                            <div class="status-indicator-box" id="webhook-status-box">
+                                <span class="status-circle" id="webhook-status-dot"></span>
+                                <span class="status-title" id="webhook-status-title">Monitoreo en Espera</span>
+                            </div>
+                            <div class="status-stats">
+                                <div>Enviados: <span id="webhook-count" class="text-white">0</span></div>
+                                <div>Latencia: <span id="webhook-latency" class="text-white">-- ms</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Respuesta n8n -->
+                        <div class="webhook-response-box">
+                            <div class="response-header">
+                                <span>Servidor de Enlace (n8n):</span>
+                                <span class="response-code text-green" id="response-code">HTTP --</span>
+                            </div>
+                            <div class="response-content" id="webhook-response-body">
+                                El servidor de análisis retornará la respuesta de n8n aquí...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JSON Editor / Visualizador -->
+                    <div class="glass-card panel-card json-card">
+                        <div class="json-header">
+                            <h3><i class="fa-solid fa-code text-cyan"></i> Datos del Evento (Payload JSON)</h3>
+                            <button id="btn-copy-json" class="btn-copy-code" title="Copiar JSON"><i class="fa-solid fa-copy"></i> Copiar</button>
+                        </div>
+                        <div class="json-content-wrapper">
+                            <pre><code id="json-viewer" class="javascript">// El payload JSON del evento se generará al iniciar el procesamiento.</code></pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer General -->
+    <footer class="app-footer">
+        <p>&copy; 2026 SafeGuardian - Sistema de Monitoreo Inteligente de Transportes e Integración n8n.</p>
+    </footer>
+
+    <!-- Audio Beep / Alarmas para uso en la interfaz -->
+    <audio id="audio-alert" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-84.wav" preload="auto"></audio>
+    <audio id="audio-critical" src="https://assets.mixkit.co/active_storage/sfx/950/950-84.wav" preload="auto"></audio>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
