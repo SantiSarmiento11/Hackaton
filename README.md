@@ -82,3 +82,12 @@ El proyecto ha sido construido utilizando estandares modernos de ingenieria de s
 - Memoria RAM: Minimo 4 GB (recomendado 8 GB para inferencia en CPU sin sobrecarga).
 - Dispositivo de captura: Camara web integrada o entrada de video USB (opcional en modo simulacion).
 - Navegador Web: Google Chrome, Mozilla Firefox o Microsoft Edge con soporte de WebSockets y Canvas.
+
+### Variables de Entorno y Configuracion
+
+| Variable | Tipo | Valor por Defecto | Descripcion |
+| :--- | :--- | :--- | :--- |
+| `HOST` | String | `0.0.0.0` | Direccion de escucha del servidor ASGI |
+| `PORT` | Entero | `8000` | Puerto de enlace para conexiones entrantes |
+| `SIMULATION_MODE` | Booleano | `True` | Alterna entre escenarios generados y captura fisica en vivo |
+| `CONFIDENCE_THRESHOLD` | Flotante | `0.50` | Umbral minimo de certeza estadistica para aceptar una deteccion |
