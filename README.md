@@ -191,3 +191,9 @@ flake8 main.py --max-line-length=120
 ## Monitoreo, Telemetria y Registro de Eventos
 
 El servidor emite registros estructurados en formato estandarizado que incluyen marca de tiempo ISO 8601, identificador de peticion, tiempo de inferencia en milisegundos y clasificacion de riesgo calculada. Esto facilita la integracion con recolectores de logs como Prometheus, Grafana Loki o Datadog.
+
+## Consideraciones de Seguridad y Buenas Practicas
+
+- Politicas de CORS restringidas para evitar invocaciones de origenes no autorizados.
+- Sanitizacion rigurosa de metadatos de archivos antes del almacenamiento o transmision.
+- Inferencia en memoria volatil sin persistencia involuntaria de imagenes de pasajeros para proteger la privacidad del usuario segun regulaciones de proteccion de datos.
