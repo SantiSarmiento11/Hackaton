@@ -69,3 +69,8 @@ El proyecto ha sido construido utilizando estandares modernos de ingenieria de s
 - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) Gestion asincrona del estado de la aplicacion y reproduccion de audio.
 - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) Estructura semantica accesible para paneles de telemetria vehicular.
 - ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) Estilos modulares con soporte de paleta de alerta basada en codigos de color vial.
+
+### Integraciones y Servicios de Machine Learning
+
+- **Ultralytics YOLOv8n**: Red neuronal convolucional optimizada para deteccion de objetos a alta tasa de cuadros por segundo (FPS).
+- **Web Audio API**: Generacion sintetizada de frecuencias de advertencia segun severidad de alerta sin requerir librerias binarias pesadas.
