@@ -161,3 +161,10 @@ Los fotogramas enviados al endpoint de procesamiento sufren las siguientes valid
 | `GET` | `/api/status` | Retorna el estado operativo del servicio y telemetria actual | `200 OK` |
 | `POST` | `/api/detect` | Procesa un fotograma y entrega coordenadas de deteccion | `200 OK` / `422 Unprocessable Entity` |
 | `POST` | `/api/simulate-step` | Solicita el avance de un paso en el ciclo de escenarios simulados | `200 OK` |
+
+### Gestion de Errores y Excepciones
+
+El backend implementa manejadores de excepcion centralizados:
+- `HTTPException(status_code=400)`: Archivo corrupto o parametros fuera de rango.
+- `HTTPException(status_code=500)`: Excepcion no controlada en el motor de inferencia con registro en bitacora interna.
+- Modos degradados: Si la GPU no esta disponible, el sistema conmuta automaticamente al procesamiento multi-hilo en CPU sin interrumpir el flujo.
