@@ -39,3 +39,15 @@ flowchart TD
     G --> H[Interfaz Web Reactiva / Dashboard]
     G --> I[Modulo de Alertas Sonoras y Visuales]
 ```
+
+### Estructura de Directorios
+
+```text
+Hackaton/
+├── app.js               # Logica de renderizado del frontend, graficos y polling
+├── index.html           # Interfaz de usuario del centro de control y monitoreo
+├── main.py              # Servidor FastAPI, endpoints REST y pipeline de inferencia
+├── requirements.txt     # Dependencias del ecosistema Python
+├── styles.css           # Diseno visual, variables CSS y estilos adaptativos
+└── yolov8n.pt           # Pesos del modelo de deep learning preentrenado YOLOv8 Nano
+```
