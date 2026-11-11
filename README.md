@@ -51,3 +51,7 @@ Hackaton/
 ├── styles.css           # Diseno visual, variables CSS y estilos adaptativos
 └── yolov8n.pt           # Pesos del modelo de deep learning preentrenado YOLOv8 Nano
 ```
+
+## Stack Tecnologico
+
+El proyecto ha sido construido utilizando estandares modernos de ingenieria de software, asegurando compatibilidad multiplataforma y latencia minima de procesamiento.
