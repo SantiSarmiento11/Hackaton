@@ -55,3 +55,11 @@ Hackaton/
 ## Stack Tecnologico
 
 El proyecto ha sido construido utilizando estandares modernos de ingenieria de software, asegurando compatibilidad multiplataforma y latencia minima de procesamiento.
+
+### Backend e Inteligencia Artificial
+
+- ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) Lenguaje de programacion principal para el pipeline de datos e inferencia.
+- ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white) Framework asincrono de alto desempeno para la exposicion de servicios REST.
+- ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white) Procesamiento digital de imagenes y transformacion de matrices de pixeles.
+- ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white) Operaciones tensoriales optimizadas y manipulacion matematica de bounding boxes.
+- ![Uvicorn](https://img.shields.io/badge/Uvicorn-499848?style=for-the-badge&logo=gunicorn&logoColor=white) Servidor ASGI de nivel de produccion para ejecucion asincrona.
