@@ -25,3 +25,17 @@ DriveSafe AI implementa una arquitectura modular de tres capas:
 1. Capa de Adquisicion e Inferencia (FastAPI, OpenCV, Ultralytics YOLOv8).
 2. Capa de Logica de Negocio y Clasificacion de Riesgo (Motor de evaluacion parametrico).
 3. Capa de Presentacion y Notificacion (Cliente web reactivo basado en JavaScript vanilla, HTML5 y CSS3).
+
+### Diagrama de Flujo Arquitectonico
+
+```mermaid
+flowchart TD
+    A[Dispositivo de Captura / WebCam / Archivo] --> B[FastAPI Ingestion Endpoint]
+    B --> C[Motor OpenCV Preprocesamiento]
+    C --> D[Ultralytics YOLOv8 Red Neuronal]
+    D --> E[Extractor de Objetos y Clases Detectadas]
+    E --> F[Algoritmo de Evaluacion de Riesgo]
+    F --> G[Generador de Metricas y Telemetria]
+    G --> H[Interfaz Web Reactiva / Dashboard]
+    G --> I[Modulo de Alertas Sonoras y Visuales]
+```
