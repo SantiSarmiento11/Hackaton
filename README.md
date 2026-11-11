@@ -218,3 +218,11 @@ Para entornos productivos en vehiculos conectados o servidores en borde (Edge AI
 | Error de inicio: archivo yolov8n.pt no encontrado | Descarga incompleta del modelo | Ejecutar `python -c "from ultralytics import YOLO; YOLO('yolov8n.pt')"` para regenerar el archivo de pesos. |
 | Latencia alta superior a 200 ms | Inferencia ejecutandose en un solo nucleo de CPU | Instalar version de PyTorch con soporte CUDA correspondiente a la GPU del equipo. |
 | Audio de alerta no se reproduce en el navegador | Politica de reproduccion automatica bloqueada por el navegador | Interactuar al menos una vez con la interfaz web para otorgar permisos de reproduccion al contexto de audio. |
+
+## Guia de Contribucion
+
+1. Realizar un Fork del proyecto.
+2. Crear una rama de funcionalidad siguiendo la convencion de ramas (`git checkout -b feature/nueva-mejora`).
+3. Registrar los cambios utilizando Conventional Commits (`git commit -m 'feat: incorporar soporte para modelo yolov8s'`).
+4. Publicar la rama (`git push origin feature/nueva-mejora`).
+5. Abrir una solicitud de extraccion (Pull Request) detallando las modificaciones y evidencias de pruebas.
