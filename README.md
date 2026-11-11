@@ -197,3 +197,10 @@ El servidor emite registros estructurados en formato estandarizado que incluyen 
 - Politicas de CORS restringidas para evitar invocaciones de origenes no autorizados.
 - Sanitizacion rigurosa de metadatos de archivos antes del almacenamiento o transmision.
 - Inferencia en memoria volatil sin persistencia involuntaria de imagenes de pasajeros para proteger la privacidad del usuario segun regulaciones de proteccion de datos.
+
+## Despliegue y Puesta en Produccion
+
+Para entornos productivos en vehiculos conectados o servidores en borde (Edge AI):
+- Empaquetar la aplicacion en un contenedor Docker con aceleracion CUDA (NVIDIA Container Toolkit).
+- Configurar Gunicorn como gestor de procesos maestros administrando workers asincronos de Uvicorn.
+- Habilitar proxy inverso con Nginx para terminacion TLS y balanceo de carga.
