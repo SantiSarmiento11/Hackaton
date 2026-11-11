@@ -138,3 +138,10 @@ El ciclo de ejecucion opera de manera continua:
 3. Evaluacion feedforward a traves de la arquitectura YOLOv8n.
 4. Filtrado de bounding boxes no relevantes mediante non-maximum suppression (NMS).
 5. Calculo del vector de severidad e identificacion de colision inminente.
+
+### Flujo de Interaccion de Usuario
+
+Al ingresar a la interfaz web:
+- Se presenta una pantalla dividida con el feed de video central.
+- En el panel lateral derecho se actualizan los indicadores clave de rendimiento: tiempo de reaccion, nivel de alerta actual, conteo de objetos por categoria y registro temporal de eventos.
+- Controles superiores permiten pausar, reanudar y conmutar el modo de simulacion dinamica.
