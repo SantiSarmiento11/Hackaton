@@ -145,3 +145,10 @@ Al ingresar a la interfaz web:
 - Se presenta una pantalla dividida con el feed de video central.
 - En el panel lateral derecho se actualizan los indicadores clave de rendimiento: tiempo de reaccion, nivel de alerta actual, conteo de objetos por categoria y registro temporal de eventos.
 - Controles superiores permiten pausar, reanudar y conmutar el modo de simulacion dinamica.
+
+### Pipeline de Datos y Validaciones
+
+Los fotogramas enviados al endpoint de procesamiento sufren las siguientes validaciones en FastAPI:
+- Tamano maximo de carga de fotograma: 10 MB.
+- Formatos de imagen aceptados: JPEG, PNG, WebP.
+- Validacion de integridad mediante lectura con OpenCV (`cv2.imdecode`). Si el arreglo binario es invalido, se rechaza la peticion con un codigo HTTP 400.
