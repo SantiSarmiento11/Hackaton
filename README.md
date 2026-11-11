@@ -129,3 +129,12 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 El sistema estara disponible inmediatamente en la direccion local:
 - Centro de Control: `http://localhost:8000`
 - Documentacion Interactiva de la API: `http://localhost:8000/docs`
+
+## Funcionamiento del Sistema
+
+El ciclo de ejecucion opera de manera continua:
+1. Adquisicion de fotogramas a traves del sensor o generador de eventos sinteticos.
+2. Normalizacion de dimension de matriz a resolucion de inferencia (640x640).
+3. Evaluacion feedforward a traves de la arquitectura YOLOv8n.
+4. Filtrado de bounding boxes no relevantes mediante non-maximum suppression (NMS).
+5. Calculo del vector de severidad e identificacion de colision inminente.
