@@ -204,3 +204,9 @@ Para entornos productivos en vehiculos conectados o servidores en borde (Edge AI
 - Empaquetar la aplicacion en un contenedor Docker con aceleracion CUDA (NVIDIA Container Toolkit).
 - Configurar Gunicorn como gestor de procesos maestros administrando workers asincronos de Uvicorn.
 - Habilitar proxy inverso con Nginx para terminacion TLS y balanceo de carga.
+
+## Optimizacion de Rendimiento y Escalabilidad
+
+- Conversion de pesos a formato TensorRT o OpenVINO para reducir el tiempo de inferencia a menos de 15 ms por cuadro en hardware de borde.
+- Reduccion del frame rate de analisis en periodos de baja velocidad vehicular para disminuir el consumo energetico.
+- Descarte selectivo de fotogramas redundantes mediante comparacion de histogramas antes de la invocacion de la red neuronal.
