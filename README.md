@@ -175,3 +175,15 @@ Se definen tres niveles de verificacion:
 - Pruebas unitarias sobre la logica de clasificacion de severidad de riesgo.
 - Pruebas de integracion sobre las rutas de FastAPI asegurando cumplimiento de contratos JSON.
 - Pruebas de rendimiento midiendo latencia por fotograma (inferencia + serializacion).
+
+### Comandos de Ejecucion de Pruebas
+
+Ejecutar la suite de pruebas unitarias mediante `pytest`:
+```bash
+pytest --verbose --durations=5
+```
+
+Verificacion sintactica y tipado estatico:
+```bash
+flake8 main.py --max-line-length=120
+```
