@@ -74,3 +74,11 @@ El proyecto ha sido construido utilizando estandares modernos de ingenieria de s
 
 - **Ultralytics YOLOv8n**: Red neuronal convolucional optimizada para deteccion de objetos a alta tasa de cuadros por segundo (FPS).
 - **Web Audio API**: Generacion sintetizada de frecuencias de advertencia segun severidad de alerta sin requerir librerias binarias pesadas.
+
+## Requisitos Previos del Sistema
+
+- Sistema Operativo: Linux (Ubuntu 20.04+), macOS 12+ o Windows 10/11.
+- Python: Version 3.10 o superior (recomendado Python 3.11).
+- Memoria RAM: Minimo 4 GB (recomendado 8 GB para inferencia en CPU sin sobrecarga).
+- Dispositivo de captura: Camara web integrada o entrada de video USB (opcional en modo simulacion).
+- Navegador Web: Google Chrome, Mozilla Firefox o Microsoft Edge con soporte de WebSockets y Canvas.
