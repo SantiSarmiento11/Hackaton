@@ -18,3 +18,10 @@ Los siniestros viales representan una de las principales causas de incidentes ev
 - Clasificacion automatizada de nivel de riesgo en cuatro niveles (Bajo, Medio, Alto, Critico).
 - Despacho inmediato de alertas audiovisuales mediante interfaz web reactiva.
 - Capacidad de operacion tanto en entornos reales mediante transmision de camara como en modo de simulacion estocastica para pruebas de homologacion.
+
+## Arquitectura del Sistema
+
+DriveSafe AI implementa una arquitectura modular de tres capas:
+1. Capa de Adquisicion e Inferencia (FastAPI, OpenCV, Ultralytics YOLOv8).
+2. Capa de Logica de Negocio y Clasificacion de Riesgo (Motor de evaluacion parametrico).
+3. Capa de Presentacion y Notificacion (Cliente web reactivo basado en JavaScript vanilla, HTML5 y CSS3).
