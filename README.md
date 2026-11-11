@@ -168,3 +168,10 @@ El backend implementa manejadores de excepcion centralizados:
 - `HTTPException(status_code=400)`: Archivo corrupto o parametros fuera de rango.
 - `HTTPException(status_code=500)`: Excepcion no controlada en el motor de inferencia con registro en bitacora interna.
 - Modos degradados: Si la GPU no esta disponible, el sistema conmuta automaticamente al procesamiento multi-hilo en CPU sin interrumpir el flujo.
+
+## Estrategia de Pruebas y Aseguramiento de Calidad
+
+Se definen tres niveles de verificacion:
+- Pruebas unitarias sobre la logica de clasificacion de severidad de riesgo.
+- Pruebas de integracion sobre las rutas de FastAPI asegurando cumplimiento de contratos JSON.
+- Pruebas de rendimiento midiendo latencia por fotograma (inferencia + serializacion).
