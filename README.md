@@ -63,3 +63,9 @@ El proyecto ha sido construido utilizando estandares modernos de ingenieria de s
 - ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white) Procesamiento digital de imagenes y transformacion de matrices de pixeles.
 - ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white) Operaciones tensoriales optimizadas y manipulacion matematica de bounding boxes.
 - ![Uvicorn](https://img.shields.io/badge/Uvicorn-499848?style=for-the-badge&logo=gunicorn&logoColor=white) Servidor ASGI de nivel de produccion para ejecucion asincrona.
+
+### Frontend y Visualizacion
+
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) Gestion asincrona del estado de la aplicacion y reproduccion de audio.
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) Estructura semantica accesible para paneles de telemetria vehicular.
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) Estilos modulares con soporte de paleta de alerta basada en codigos de color vial.
