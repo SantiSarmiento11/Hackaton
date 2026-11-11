@@ -91,3 +91,17 @@ El proyecto ha sido construido utilizando estandares modernos de ingenieria de s
 | `PORT` | Entero | `8000` | Puerto de enlace para conexiones entrantes |
 | `SIMULATION_MODE` | Booleano | `True` | Alterna entre escenarios generados y captura fisica en vivo |
 | `CONFIDENCE_THRESHOLD` | Flotante | `0.50` | Umbral minimo de certeza estadistica para aceptar una deteccion |
+
+## Guia de Instalacion y Despliegue Local
+
+1. Clonar el repositorio localmente:
+```bash
+git clone https://github.com/SantiSarmiento11/Hackaton.git
+cd Hackaton
+```
+
+2. Crear y activar un entorno virtual aislado:
+```bash
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+```
