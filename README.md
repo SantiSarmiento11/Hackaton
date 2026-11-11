@@ -226,3 +226,9 @@ Para entornos productivos en vehiculos conectados o servidores en borde (Edge AI
 3. Registrar los cambios utilizando Conventional Commits (`git commit -m 'feat: incorporar soporte para modelo yolov8s'`).
 4. Publicar la rama (`git push origin feature/nueva-mejora`).
 5. Abrir una solicitud de extraccion (Pull Request) detallando las modificaciones y evidencias de pruebas.
+
+## Autoria y Creditos del Proyecto
+
+Proyecto concebido, estructurado y desarrollado por [Santiago Sarmiento](https://github.com/SantiSarmiento11).
+
+Iniciativa de innovacion en sistemas inteligentes de transporte, telemetria vehicular y vision computacional para la reduccion de siniestralidad vial.
