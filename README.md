@@ -118,3 +118,14 @@ Verificar la correcta importacion del modelo de deep learning ejecutando:
 ```bash
 python -c "import ultralytics; print(ultralytics.__file__)"
 ```
+
+### Inicializacion del Servidor
+
+Iniciar la instancia de la aplicacion mediante Uvicorn:
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+El sistema estara disponible inmediatamente en la direccion local:
+- Centro de Control: `http://localhost:8000`
+- Documentacion Interactiva de la API: `http://localhost:8000/docs`
