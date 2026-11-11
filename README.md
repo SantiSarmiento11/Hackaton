@@ -187,3 +187,7 @@ Verificacion sintactica y tipado estatico:
 ```bash
 flake8 main.py --max-line-length=120
 ```
+
+## Monitoreo, Telemetria y Registro de Eventos
+
+El servidor emite registros estructurados en formato estandarizado que incluyen marca de tiempo ISO 8601, identificador de peticion, tiempo de inferencia en milisegundos y clasificacion de riesgo calculada. Esto facilita la integracion con recolectores de logs como Prometheus, Grafana Loki o Datadog.
