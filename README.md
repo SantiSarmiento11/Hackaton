@@ -105,3 +105,16 @@ cd Hackaton
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
 ```
+
+### Instalacion de Dependencias
+
+Instalar los paquetes requeridos especificados en `requirements.txt`:
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Verificar la correcta importacion del modelo de deep learning ejecutando:
+```bash
+python -c "import ultralytics; print(ultralytics.__file__)"
+```
