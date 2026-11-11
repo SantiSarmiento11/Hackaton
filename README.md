@@ -210,3 +210,11 @@ Para entornos productivos en vehiculos conectados o servidores en borde (Edge AI
 - Conversion de pesos a formato TensorRT o OpenVINO para reducir el tiempo de inferencia a menos de 15 ms por cuadro en hardware de borde.
 - Reduccion del frame rate de analisis en periodos de baja velocidad vehicular para disminuir el consumo energetico.
 - Descarte selectivo de fotogramas redundantes mediante comparacion de histogramas antes de la invocacion de la red neuronal.
+
+## Matriz de Resolucion de Incidencias
+
+| Incidencia | Posible Causa | Accion Correctiva |
+| :--- | :--- | :--- |
+| Error de inicio: archivo yolov8n.pt no encontrado | Descarga incompleta del modelo | Ejecutar `python -c "from ultralytics import YOLO; YOLO('yolov8n.pt')"` para regenerar el archivo de pesos. |
+| Latencia alta superior a 200 ms | Inferencia ejecutandose en un solo nucleo de CPU | Instalar version de PyTorch con soporte CUDA correspondiente a la GPU del equipo. |
+| Audio de alerta no se reproduce en el navegador | Politica de reproduccion automatica bloqueada por el navegador | Interactuar al menos una vez con la interfaz web para otorgar permisos de reproduccion al contexto de audio. |
