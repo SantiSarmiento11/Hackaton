@@ -152,3 +152,12 @@ Los fotogramas enviados al endpoint de procesamiento sufren las siguientes valid
 - Tamano maximo de carga de fotograma: 10 MB.
 - Formatos de imagen aceptados: JPEG, PNG, WebP.
 - Validacion de integridad mediante lectura con OpenCV (`cv2.imdecode`). Si el arreglo binario es invalido, se rechaza la peticion con un codigo HTTP 400.
+
+### Especificacion de Endpoints REST
+
+| Metodo | Ruta | Descripcion | Codigo de Respuesta |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/` | Redireccion a la interfaz web o vista principal | `200 OK` |
+| `GET` | `/api/status` | Retorna el estado operativo del servicio y telemetria actual | `200 OK` |
+| `POST` | `/api/detect` | Procesa un fotograma y entrega coordenadas de deteccion | `200 OK` / `422 Unprocessable Entity` |
+| `POST` | `/api/simulate-step` | Solicita el avance de un paso en el ciclo de escenarios simulados | `200 OK` |
